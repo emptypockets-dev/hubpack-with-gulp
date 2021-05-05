@@ -1,0 +1,34 @@
+<div class="social-links">
+  {% for item in module.social_links %}
+    {% set href = item.social_link.url.href %}
+    {% if item.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+    {% endif %}
+    {% set rel = [] %}
+    {% if item.social_link.no_follow %}
+      {% do rel.append("nofollow") %}
+    {% endif %}
+    {% if item.social_link.open_in_new_tab %}
+      {% do rel.append("noopener") %}
+    {% endif %}
+
+    {% if item.social_account != 'custom_icon' %}
+      {% set social_icon = item.social_account %}
+    {% else %}
+      {% set social_icon = item.custom_icon.name %}
+    {% endif %}
+
+    <a class="social-links__link" href="{{ href }}"
+    {% if item.social_link.open_in_new_tab %}target="_blank"{% endif %}
+    {% if rel %}rel="{{ rel|join(' ') }}"{% endif %}>
+      {% icon
+        extra_classes='social-links__icon',
+        name='{{ social_icon }}',
+        purpose='semantic',
+        style='SOLID',
+        title='{{ item.accessibility.title }}',
+        unique_in_loop=True
+      %}
+    </a>
+  {% endfor %}
+</div>

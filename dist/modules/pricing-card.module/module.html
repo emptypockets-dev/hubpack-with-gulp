@@ -1,0 +1,60 @@
+{%- macro inlineDynamicButtonStyles(styleDict) -%}
+  {%- for prop, value in styleDict.items() -%}
+    {{ prop|replace('_', '-') ~ ': ' ~ value ~ ( loop.last ? '' : '; ') }}
+  {%- endfor -%}
+{%- endmacro -%}
+{%- set buttonStyles = {
+    background_color: module.button_bg.color,
+    color: module.button_text_color.color
+  }
+-%}
+
+{% set href = module.button_link.url.href %}
+{% if module.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+	{% set href = "mailto:" + href %}
+{% endif %}
+{% set rel = [] %}
+{% if module.button_link.no_follow %}
+	{% do rel.append("nofollow") %}
+{% endif %}
+{% if module.button_link.open_in_new_tab %}
+	{% do rel.append("noopener") %}
+{% endif %}
+
+<section class="card card--pricing">
+  {% if module.tier and module.description %}
+    <div class="card__header">
+      {% if module.tier %}
+        <{{ module.tier_heading_type }} class="card__heading">{{ module.tier }}</{{ module.tier_heading_type }}>
+      {% endif %}
+      {% if module.description %}
+        <p class="card__subtitle"> {{ module.description }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+  <hr>
+  <div class="card__body">
+    <ul>
+      {% for feature in module.features %}
+        <li>
+          {% icon
+            name='{{ module.feature_icon.name }}'
+            purpose='decorative'
+            style='{{ module.feature_icon.type }}'
+            unicode='{{ module.feature_icon.unicode }}'
+            no_wrapper=True
+          %}{{ feature }}
+        </li>
+      {% endfor %}
+    </ul>
+    <hr>
+    <p class="card__price">{{ module.price }}</p>
+    <a class="button"
+    style="{{ inlineDynamicButtonStyles(buttonStyles) }}"
+    href="{{ href }}"
+    {% if module.button_link.open_in_new_tab %}target="_blank"{% endif %}
+    {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}>
+      {{ module.button_text }}
+    </a>
+  </div>
+</section>

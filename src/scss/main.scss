@@ -1,0 +1,36 @@
+/* Theme base styles */
+
+/* Tools
+Any animations, or functions used throughout the project.
+Note: _macros.css needs to be imported into each stylesheet where macros are used and not included here
+*/
+
+/* Generic
+This is where reset, normalize & box-sizing styles go.
+*/
+
+@import './generic/_reset.scss'; 
+@import './generic/_normalize.scss'; 
+
+/* Objects
+Non-cosmetic design patterns including grid and layout classes)
+*/
+
+@import './objects/_layout.scss'; 
+@import './objects/_containers-dnd.scss'; 
+
+/* Elements
+Base HMTL elements are styled in this section (<body<, <h1>, <a>, <p>, <button> etc.)
+*/
+
+@import './elements/_typography.scss'; 
+@import './elements/_buttons.scss'; 
+@import './elements/_forms.scss'; 
+@import './elements/_tables.scss'; 
+
+/* Components
+Specific pieces of UI that are stylized. Typically used for global partial styling
+*/
+
+@import './components/_header.scss'; 
+@import './components/_default-modules.scss'; 

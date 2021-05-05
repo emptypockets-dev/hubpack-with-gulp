@@ -1,0 +1,36 @@
+.card--pricing {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  text-align: center; }
+
+.card__header {
+  text-align: center; }
+
+.card__subtitle,
+.card__body li {
+  font-size: 0.9rem;
+  line-height: 1.2em; }
+
+.card__body ul,
+.card__body li {
+  padding: 0; }
+
+.card__body li {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+  text-align: left; }
+
+.card__body svg {
+  display: inline-block;
+  fill: #494A52;
+  margin-right: 10px;
+  max-width: 20px; }
+
+@media screen and (max-width: 1200px) {
+  .card--pricing {
+    padding: 2rem 1rem; } }
+
+@media screen and (max-width: 787px) {
+  .card--pricing {
+    margin-bottom: 1rem; } }
