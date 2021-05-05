@@ -1,4 +1,4 @@
-<h1 align="center">HubSpot CMS Boilerplate + Gulp + Webpack + SCSS + Babel</h1>
+<h1 align="center">HubSpot CMS Boilerplate + Gulp + Webpack + SCSS + Babel + Love </h1>
 
 <p align="center">
   A still straight-forward starting point for building a great website on the HubSpot CMS—but better. 
@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Adds Gulp, SCSS, and Babel to the standard Hubspot CMS boilerplate. 
+Adds Gulp, Webpack, SCSS, and Babel to the standard Hubspot CMS boilerplate. 
 
 ## Getting started
 
@@ -17,4 +17,14 @@ Adds Gulp, SCSS, and Babel to the standard Hubspot CMS boilerplate.
 5. Optional: set a new github remote `git remote set-url origin <your github page>`
 6. Optional: push to github with gulp `gulp push -m "<your commit message>"` (stage, commit and push!)
 7. `(ノಠ益ಠ)ノ彡┻━┻` if I missed an instruction (and let me know).
+
+## Commands
+Run gulp (create dist, SCSS ) + run webpack (JS, autoupload to Hubspot)
+```
+gulp
+```
+Run gulp + run webpack + (stage, commit, push) to Github
+```
+gulp push -m "<your commit message"
+```
 
