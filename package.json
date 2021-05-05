@@ -1,6 +1,6 @@
 {
   "name": "hubpack-with-gulp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Hubspot + Gulp + SCSS + Webpack + Boilerplate",
   "repository": {
     "type": "git",

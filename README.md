@@ -11,12 +11,13 @@ Adds Gulp, Webpack, SCSS, and Babel to the standard Hubspot CMS boilerplate.
 ## Getting started
 
 1. Do everything that the standard boilerplate requires
-2. `npm install`
-3. create a blank `.env` file in `/` (you'll need this later)
-3. upate `gulpfile.js/webpack.js` with your Hubspot destination folder
-5. Optional: set a new github remote `git remote set-url origin <your github page>`
-6. Optional: push to github with gulp `gulp push -m "<your commit message>"` (stage, commit and push!)
-7. `(ノಠ益ಠ)ノ彡┻━┻` if I missed an instruction (and let me know).
+2. install gulp following the instructions on https://gulpjs.com
+3. `npm install`
+4. create a `.env` file in `/` containing `account=4395843` (replace those random numbers with your Hubspot portal id)
+5. upate `gulpfile.js/webpack.js` with your folder in Hubspot
+6. Optional: set a new github remote `git remote set-url origin <your github page>`
+7. Optional: push to github with gulp `gulp push -m "<your commit message>"` (stage, commit and push!)
+8. `(ノಠ益ಠ)ノ彡┻━┻` if I missed an instruction (and let me know).
 
 ## Commands
 Run gulp (create dist, SCSS ) + run webpack (JS, autoupload to Hubspot)
