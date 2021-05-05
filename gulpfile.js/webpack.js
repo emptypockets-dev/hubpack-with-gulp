@@ -23,22 +23,22 @@ function autoUploadToHubspot(cb) {
           filename: 'js/index.bundle.js',
         },
         module: {
-            rules: [
-              {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                  loader: 'babel-loader',
-                },
+          rules: [
+            {
+              test: /\.js$/,
+              exclude: /node_modules/,
+              use: {
+                loader: 'babel-loader',
               },
-            ]
+            },
+          ]
         },
         plugins: [
           new HubSpotAutoUploadPlugin({
             autoupload,
             account,
             src: 'dist',
-            dest: 'gulp-pack-boilerplate',
+            dest: 'project-in-hubspot',
           }),
           new CopyWebpackPlugin([
             { from: './dist/images', to: 'images' },

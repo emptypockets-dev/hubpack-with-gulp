@@ -1,12 +1,12 @@
 {
-  "name": "gulp-pack-boilerplate",
-  "version": "1.0.2",
-  "description": "Hubspot + Gulp + Webpack + Boilerplate",
+  "name": "hubpack-with-gulp",
+  "version": "1.0.1",
+  "description": "Hubspot + Gulp + SCSS + Webpack + Boilerplate",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akondratyuk-dev/gulp-pack-boilerplate"
+    "url": "https://github.com/emptypockets-dev/hubpack-with-gulp.git"
   },
-  "author": "",
+  "author": "Andrey Kondratyuk",
   "license": "Apache-2.0",
   "devDependencies": {
     "@babel/core": "^7.14.0",
